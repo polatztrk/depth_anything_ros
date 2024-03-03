@@ -52,14 +52,11 @@ class Pointcloud_publisher(Node):
         data = points.astype(dtype).tobytes() 
 
 
-        # The fields specify what the bytes represents. The first 4 bytes 
-        # represents the x-coordinate, the next 4 the y-coordinate, etc.
         fields = [sensor_msgs.PointField(
             name=n, offset=i*itemsize, datatype=ros_dtype, count=1)
             for i, n in enumerate('yzx')]
 
-        # The PointCloud2 message also has a header which specifies which 
-        # coordinate frame it is represented in. 
+
         header = std_msgs.Header(frame_id='link')
         pcd_msg = sensor_msgs.PointCloud2(
             header=header,
