@@ -1,6 +1,6 @@
 # Depth Anything ROS2 Wrapper
 
-This repository contains a ROS (Robot Operating System) node for estimating depth from RGB images using the Depth Anything model. The Depth Anything model is based on [LiheYoung's depth_anything_model](https://github.com/LiheYoung/Depth-Anything) .
+This repository contains a ROS (Robot Operating System) node for estimating depth from RGB images using the Depth Anything model. The Depth Anything model is based on [LiheYoung's depth_anything](https://github.com/LiheYoung/Depth-Anything) model.
 
 ## Prerequisites
 
@@ -45,7 +45,8 @@ cd your_ws
 source install/setup.bash
 ros2 launch depth2point launch_depth_to_point.launch.py
 ```
-
+## Cite
+Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, Hengshuang Zhao, "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data", arXiv:2401.10891, 2024 [ref](https://arxiv.org/abs/2401.10891)
 
 
 
